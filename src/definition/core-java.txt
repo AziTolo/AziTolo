@@ -1,70 +1,75 @@
 ***ANSWER ALL QUESTIONS BELOW***
 
 What is a programming language?
-Answer:
+Answer:A programming language is a formal language comprising a set of instructions that produce various kinds of output. Programming languages are used in computer programming to implement algorithms.
 
 What is a JDK composed of? Define each components?
-Answer:
+Answer:The Java Development Kit (JDK) is a software development environment used for developing Java applications and applets.
+
+       It includes the Java Runtime Environment (JRE), an interpreter/loader (java), a compiler (javac), an archiver (jar), a documentation generator (javadoc) and other tools needed in Java development.
 
 What is an IDE?
-Answer:
+Answer:An IDE, or Integrated Development Environment, enables programmers to consolidate the different aspects of writing a computer program.
+
+       IDEs increase programmer productivity by combining common activities of writing software into a single application: editing source code, building executables, and debugging.
 
 What are some of the most popular Java IDEs available in the market?
-Answer:
+Answer:Answer:Eclipse,IntelliJ IDEA,BlueJ,jGRASP
+
 
 Explain the entire java life cycle.
 Answer:
 
 What is a class?
-Answer:
+Answer: A class is a blueprint that defines the variables and the methods common to all objects of a certain kind.
 
 What is an object?
-Answer:
+Answer:An object is any entity that has a state and behavior.An object is called an instance of a class
 
 What is the entry point of an application?
-Answer:
+Answer: where the first instructions of a program are executed, and where the program has access to command line arguments
 
 Why is the main() static?
-Answer:
+Answer:because keyword static allows main to be called without creating an object of the class in which the main method is defined.
 
 Which class is the superclass of all classes?
-Answer:
+Answer:object class
 
 What is difference between path and classpath variables?
-Answer:
+Answer:Path and Classpath both are operating system level environment variales. Path is used define where the system can find the executables files and classpath is used to specify the location .class files.
 
 What is the difference between an Interface and Abstract class?
-Answer:
+Answer:Abstract classes can have constants, members, method stubs (methods without a body) and defined methods, whereas interfaces can only have constants and methods stubs.
 
 Can you make an Object from an Interface and Abstract class? If yes or no, how would you do it?
-Answer:
+Answer:NO,if we try to instantiate an interface, a compile time error will be generated saying “MyInterface is abstract; cannot be instantiated”.
 
 What is Access Modifier?
-Answer:
+Answer:A Java access modifier specifies which classes can access a given class and its fields, constructors and methods.A Java access modifier specifies which classes can access a given class and its fields, constructors and methods
 
 What is OOP? Define each OOP concept.
-Answer:
+Answer:Object Oriented programming (OOP) is a programming paradigm that relies on the concept of classes and objects. It is used to structure a software program into simple, reusable pieces of code blueprints , which are used to create individual instances of objects. Abstraction: means using simple things to represent complexity,In Java, abstraction means simple things like objects, classes, and variables represent more complex underlying code and data.Encapsulation:is used to hide the values or state of a structured data object inside a class , preventing unauthorized parties' direct access to them.Inheritance :is a feature that helps to reuse the methods and variables of one class in another class,it allows a new class to inherit the properties and functions of an existing class without rewriting the code.Polymorphism:Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance This allows us to perform a single action in different ways.
 
 What is Java Package and which package is imported by default?
-Answer:
+Answer:A package in Java is used to group related classes. Think of it as a folder in a file directory. We use packages to avoid name conflicts, and to write a better maintainable code.java.lang package
 
 What is an API? List some API's that you have used so far.
-Answer:
+Answer:An application programming interface is a computing interface that defines interactions between multiple software applications or mixed hardware-software intermediaries.Facebook login,tweeter,Google,Github,pay with paypal
 
 Does java support multiple inheritance? Why or why not?
-Answer:
+Answer:No, a class cannot extend more than one class.
 
 What is method overloading and when does it happen?
-Answer:
+Answer:If a class has multiple methods having same name but different in parameters, it is known as Method Overloading.
 
 Explain exceptions in java and how to handle them.
-Answer:
+Answer:An exception  is a problem that arises during the execution of a program.Catching Exceptions using try catch,Catching All Exceptions,Catching Multiple Exceptions,Closing Resources,Throwing Exceptions – Throw keyword,
 
 What is static keyword? When and how do we use it?
-Answer:
+Answer:In Java, static keyword is mainly used for memory management. It can be used with variables, methods, blocks and nested classes. It is a keyword which is used to share the same variable or method of a given class. Basically, static is used for a constant variable or a method that is same for every instance of a class. The main method of a class is generally labeled static.Use a static class to contain methods that are not associated with a particular object,
 
 What is final keyword? When and how do we use it?
-Answer:
+Answer:The final keyword is a non-access modifier used for classes, attributes and methods, which makes them non-changeable.The final keyword is useful when you want a variable to always store the same value,we can declare some or all of a class's methods final. You use the final keyword in a method declaration to indicate that the method cannot be overridden by subclasses
 
 Explain the difference between final, finally and finalize?
 Answer:
