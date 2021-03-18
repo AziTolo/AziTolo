@@ -72,34 +72,34 @@ What is final keyword? When and how do we use it?
 Answer:The final keyword is a non-access modifier used for classes, attributes and methods, which makes them non-changeable.The final keyword is useful when you want a variable to always store the same value,we can declare some or all of a class's methods final. You use the final keyword in a method declaration to indicate that the method cannot be overridden by subclasses
 
 Explain the difference between final, finally and finalize?
-Answer:-m-
+Answer:The final is a keyword in Java that prevents changing variables, avoid method overriding and avoid extending classes.The finally is a block in Java exception handling, that will execute whether an exception is thrown or not.The finalize is a method in Java, called by the garbage collector before it destroys the object completely.The final is applicable for variables, methods and classes.The finally is applicable with a try and catch blocks.The finalize is applicable for objects.
 
 What is a constructor?
-Answer:
+Answer:A constructor in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes
 
 Can we have multiple constructors in a class?
-Answer:
-
 If we don't have a constructor declared, what is called during the object creation?
-Answer:
+Answer:if a class does not explicitly declare any constructors,the java platform automatically provides a no-argument constructor,called the default constructor that does nothing
 
 What is "this" keyword in Java? When would we use it?
-Answer:
+Answer:this keyword in Java is a reference variable that refers to the current object of a method or a constructor.The main purpose of using this keyword in Java is to remove the confusion between class attributes and parameters that have same names
 
 What is "super" keyword in Java? What are some scenarios we would use it?
-Answer:
+Answer:The super keyword in Java is a reference variable which is used to refer immediate parent class object.
+
+       Whenever you create the instance of subclass, an instance of parent class is created implicitly which is referred by super reference variable.super can be used to refer immediate parent class instance variable.super can be used to invoke immediate parent class method.super() can be used to invoke immediate parent class constructor.
 
 What does JVM stand for?
-Answer:
+Answer:java virtual machine
 
 Is JVM platform independent?
-Answer:
+Answer:no
 
 What version of Java are you using?
-Answer:
+Answer:8
 
 What does JAR stand for?
-Answer:
+Answer:Java Archive
 
 What is the difference between JDK and JVM?
 Answer:
