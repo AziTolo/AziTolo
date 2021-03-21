@@ -1,8 +1,17 @@
 package datastructure;
 
+import com.fasterxml.jackson.databind.exc.InvalidDefinitionException;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.Buffer;
+
 public class DataReader {
 
-    public static void main(String[] args) {
+
+
+    public static void main(String[] args) throws IOException {
         /*
          * Create an API to read the below textFile and print it to the console.
          *      HINT: Use BufferedReader class
@@ -18,7 +27,20 @@ public class DataReader {
          * Use For-Each & While-loop with Iterator to retrieve data.
          */
 
-        String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car.txt";
+
+
+        try(FileReader fileReader=new FileReader("src/data/self-driving-car") ){
+         BufferedReader bufferedReader=new BufferedReader(fileReader);
+         int i;
+         while ((i=bufferedReader.read())!=-1)
+             System.out.print((char)i);
+         bufferedReader.close();
+
+
+     }catch (IOException E){
+         E.printStackTrace();
+         System.out.println("File not find");
+     }
 
     }
 
