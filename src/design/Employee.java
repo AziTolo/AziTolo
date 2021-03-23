@@ -15,21 +15,36 @@ public interface Employee {
 
     // employeeId() will return employee id.
 
-   public int employeeId();
+    int employeeId();
     public void setEmployeeId(int i);
 
 
     //employeeName() will return employee name
-    public void setEmployeeName(String name);
+    void setEmployeeName(String name);
     public String employeeName();
 
     //assignDepartment() will assign employee to departments
-   public void assignDepartment();
+  void assignDepartment();
 
     //calculate employee salary
-   public int calculateSalary();
+
+    int calculateSalary();
 
     //employee benefit
-    public void benefitLayout();
+    void benefitLayout();
+
+    // employeeDOB() will return date of birth
+    void employeeDOB();
+
+    // employeeSSN() will return social security num
+    void employeeSSN();
+
+    //employeeIsWorkingFromHome() will return location of work place
+    void employeeIsWorkingFromHome();
+
+    // employeeExperience() will return employee experience
+    void employeeExperience();
+
+
 
 }
