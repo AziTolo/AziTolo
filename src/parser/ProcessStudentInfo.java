@@ -1,10 +1,7 @@
 package parser;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -12,6 +9,7 @@ import org.xml.sax.SAXException;
 
 
 public class ProcessStudentInfo {
+   
 
     /*
      * Under XmlReader class, the parseData() will return list of Student Info which will contain Student first name, last name and score.
@@ -35,43 +33,60 @@ public class ProcessStudentInfo {
      *
      */
 
-    public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+
+    public static <DataObject, K, V> void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
         // Path of XML data to be read.
         String pathSelenium = System.getProperty("user.dir") + "/src/parser/selenium.xml";
         String pathQtp = System.getProperty("user.dir") + "/src/parser/qtp.xml";
         String tag = "id";
 
-        //Declare a Map with List<String> into it.
+//Declare a Map with List<String> into it.
         Map<String, List<Student>> list = new LinkedHashMap<String, List<Student>>();
-				
-        /*
-        Declare 2 ArrayList, accepting Student datatype, which you will use to store students from the Selenium class
-            into one list, and students from the QTP class into another list
-        */
+
+/*
+Declare 2 ArrayList, accepting Student datatype, which you will use to store students from the Selenium class
+into one list, and students from the QTP class into another list
+*/
         List<Student> seleniumStudents = new ArrayList<Student>();
         List<Student> qtpStudents = new ArrayList<Student>();
 
-        // Create XMLReader object.
+// Create XMLReader object.
         XmlReader xmlReader = new XmlReader();
 
-        // Parse Data using parseData method and then store data into Selenium ArrayList.
+// Parse Data using parseData method and then store data into Selenium ArrayList.
         seleniumStudents = xmlReader.parseData(tag, pathSelenium);
 
-        // Parse Data using parseData method and then store data into QTP ArrayList.
+// Parse Data using parseData method and then store data into QTP ArrayList.
+        qtpStudents = xmlReader.parseData(tag, pathQtp);
 
-        // Add Selenium ArrayList data into map.
+// Add Selenium ArrayList data into map.
+        list.put("SeleniumStudents ", seleniumStudents);
 
-        // Add Qtp ArrayList data into map.
+// Add Qtp ArrayList data into map.
+        list.put("QTPStudents ", qtpStudents);
 
-        // Retrieve map data and display output for both maps.
+// Retrieve map data and display output for both maps.
+        for (List<Student> student : list.values()) {
+            for (Student s : student) {
+                System.out.println("*****************************************************************");
+                System.out.println("Student ID: " + s.id);
 
+                System.out.println("First Name: " + s.firstName);
 
+                System.out.println("Last Name: " + s.lastName);
 
-        List<Student> stList = new ArrayList<>();
-        for (Student st : stList) {
-            System.out.println(st.getFirstName() + " " + st.getLastName() + " " + st.getScore() + " " + st.getId());
+                System.out.println("Score: " + s.score);
+
+            }
+
+//Method 2
+
+// List<Student> stList = new ArrayList<>();
+// for (Student st : stList) {
+// System.out.println(st.getFirstName() + " " + st.getLastName() + " " + st.getScore() + " " + st.getId());
+// }
+
         }
 
     }
-
 }
